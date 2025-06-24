@@ -1,0 +1,43 @@
+header .container {
+  padding: 8px 0;
+  display: flex;
+  height: 72px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo p {
+  position: absolute;
+  left: -1000px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 20px;
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}
+
+.efeito a::after {
+  content: " ";
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: -1px;
+  background: $text-color;
+  border-radius: 6px;
+}
+
+.efeito a:hover::after {
+  width: 100%;
+  transition: 0.4s width ease-in;
+}

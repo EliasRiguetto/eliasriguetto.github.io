@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "personal";
+  src: url("../font/personal.ttf") format("truetype");
+}
+* {
+  font-family: "Nunito", sans-serif;
+  color: #2e2e2e;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+.text {
+  color: #474747;
+  font-size: 1.25rem;
+}
+
+.sub-title {
+  font-size: 128px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1000;
+}
+.sub-title::before {
+  content: "";
+  position: absolute;
+  left: -48px;
+  top: 33%;
+  transform: translateY(-50%);
+  width: 140px;
+  height: 140px;
+  background-image: url("../img/icon/detalhe.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -10;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: block;
+  color: #2e2e2e;
+  padding: 4px 12px;
+  border: 2px solid #2e2e2e;
+  box-shadow: 0px 4px 1px #2e2e2e;
+  border-radius: 28px;
+}
+.btn:hover {
+  background: #FFCC00;
+  transition: 0.4s ease-in;
+}
+.btn:focus {
+  box-shadow: 0px 1px 0px;
+  transition: all 0.1s ease-out;
+}
+
+header .container {
+  padding: 8px 0;
+  display: flex;
+  height: 72px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo p {
+  position: absolute;
+  left: -1000px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 20px;
+}
+.nav ul li {
+  display: flex;
+  align-items: center;
+}
+.nav ul a {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.efeito a::after {
+  content: " ";
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: -1px;
+  background: #474747;
+  border-radius: 6px;
+}
+
+.efeito a:hover::after {
+  width: 100%;
+  transition: 0.4s width ease-in;
+}
+
+main {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main h1 {
+  font-family: "personal", sans-serif;
+  font-size: 64px;
+}
+main h2 {
+  font-size: 32px;
+}
+
+#about {
+  padding: 40px 0;
+  min-height: 100vh;
+  display: flex;
+  gap: 40px;
+}
+
+#projects {
+  padding: 40px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.all-projects {
+  padding: 60px 0;
+  min-height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */

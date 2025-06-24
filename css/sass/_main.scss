@@ -1,0 +1,16 @@
+main {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    font-family: 'personal', sans-serif;
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+}
