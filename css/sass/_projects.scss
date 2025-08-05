@@ -1,11 +1,49 @@
 #projects {
   padding: 40px 0;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  >div {
+    min-height: 100vh;
+
+    >p {
+      max-width: 60ch;
+      margin-bottom: 60px;
+    }
+  }
 }
+
+.icon {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  div {
+    display: flex;
+    width: 80px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
 
 .all-projects {
   padding: 60px 0;
+}
+
+.project-item {
   min-height: 100vh;
+  background-color: aquamarine;
+  display: flex;
+  gap: 40px;
+
+  .site-img {
+    width: 100%;
+  }
+
+  .site-description {
+    width: 470px;
+  }
 }
