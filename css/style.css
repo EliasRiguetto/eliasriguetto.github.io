@@ -47,6 +47,7 @@ body {
   font-weight: 600;
   position: relative;
   z-index: 1000;
+  margin-bottom: 16px;
 }
 .sub-title::before {
   content: "";
@@ -74,6 +75,7 @@ body {
   border: 2px solid #2e2e2e;
   box-shadow: 0px 4px 1px #2e2e2e;
   border-radius: 28px;
+  cursor: pointer;
 }
 .btn:hover {
   background: #FFCC00;
@@ -82,6 +84,20 @@ body {
 .btn:focus {
   box-shadow: 0px 1px 0px;
   transition: all 0.1s ease-out;
+}
+
+.input, textarea {
+  color: #2e2e2e;
+  padding: 4px 12px;
+  border: 2px solid #2e2e2e;
+  border-radius: 28px;
+  width: 100%;
+  font-size: 0.875rem;
+  padding: 8px;
+  text-indent: 8px;
+}
+.input:focus, textarea:focus {
+  border-color: 2px solid #FFCC00;
 }
 
 header .container {
@@ -142,23 +158,26 @@ main h2 {
 }
 
 #about {
-  padding: 40px 0;
-  min-height: 100vh;
+  padding: 60px 0;
   display: flex;
   gap: 40px;
 }
+#about p {
+  width: 60ch;
+}
 
 #projects {
-  padding: 40px 0;
+  padding: 60px 0;
   display: flex;
   flex-direction: column;
 }
-#projects > div {
-  min-height: 100vh;
-}
-#projects > div > p {
+#projects p {
   max-width: 60ch;
   margin-bottom: 60px;
+}
+
+#about-project {
+  padding: 60px 0;
 }
 
 .icon {
@@ -180,7 +199,6 @@ main h2 {
 }
 
 .project-item {
-  min-height: 100vh;
   background-color: aquamarine;
   display: flex;
   gap: 40px;
@@ -190,6 +208,78 @@ main h2 {
 }
 .project-item .site-description {
   width: 470px;
+}
+
+#contact {
+  padding: 60px 0;
+}
+#contact > div {
+  display: flex;
+  gap: 40px;
+}
+
+#contact-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 68px;
+}
+#contact-text > p,
+#contact-text span {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+#contact-text span {
+  color: #FFCC00;
+  font-weight: 600;
+}
+
+#contact-web {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#contact-web > div {
+  display: flex;
+  gap: 12px;
+}
+#contact-web p {
+  font-weight: 600;
+  text-indent: 4px;
+}
+
+#form {
+  width: 100%;
+}
+#form .form-group {
+  margin-bottom: 16px;
+}
+#form .form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  border-top: 2px solid rgb(224, 224, 224);
+  font-weight: 600;
+}
+footer p {
+  font-weight: 600;
+}
+footer img {
+  width: 48px;
+}
+footer .nav ul a {
+  font-size: 1rem;
+}
+footer .nav ul a:hover {
+  color: #FFCC00;
+  transition: all 0.4s;
 }
 
 /*# sourceMappingURL=style.css.map */

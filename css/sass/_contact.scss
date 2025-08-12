@@ -1,0 +1,52 @@
+#contact {
+    padding: 60px 0;
+
+    >div {
+        display: flex;
+        gap: 40px;
+    }
+}
+
+#contact-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 68px;
+
+    >p,
+    span {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    span {
+        color: $details;
+        font-weight: 600;
+    }
+}
+
+#contact-web {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    >div {
+        display: flex;
+        gap: 12px;
+    }
+    p{
+         font-weight: 600;
+         text-indent: 4px;
+    }
+}
+
+#form{
+    width: 100%;
+    .form-group{
+        margin-bottom: 16px;
+        label{
+            display: block;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+    }
+}

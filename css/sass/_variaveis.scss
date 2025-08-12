@@ -29,6 +29,7 @@ body {
   font-weight: 600;
   position: relative;
   z-index: 1000;
+  margin-bottom: 16px ;
 
   &::before {
     content: '';
@@ -57,6 +58,7 @@ body {
   border: 2px solid $secondary-color;
   box-shadow: 0px 4px 1px $secondary-color;
   border-radius: 28px;
+  cursor: pointer;
 
   &:hover {
     background: $details;
@@ -66,6 +68,20 @@ body {
   &:focus {
     box-shadow: 0px 1px 0px;
     transition: all .1s ease-out;
+
+  }
+}
+.input, textarea{
+  color: $secondary-color;
+  padding: 4px 12px;
+  border: 2px solid $secondary-color;
+  border-radius: 28px;
+  width: 100%;
+  font-size: 0.875rem;
+  padding: 8px;
+  text-indent: 8px;
+    &:focus{
+    border-color: 2px solid $details;
 
   }
 }
