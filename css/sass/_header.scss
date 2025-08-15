@@ -1,5 +1,5 @@
 header .container {
-  padding: 8px 0;
+  padding: 8px;
   display: flex;
   height: 72px;
   align-items: center;
@@ -40,4 +40,18 @@ header .container {
 .efeito a:hover::after {
   width: 100%;
   transition: 0.4s width ease-in;
+}
+
+@include d(s){
+  .logo{
+    display: none;
+  }
+  header{
+    .container{
+      justify-content: center;
+      .nav a{
+        font-size: 1rem;
+      }
+    }
+  }
 }

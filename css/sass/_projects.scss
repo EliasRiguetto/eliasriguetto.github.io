@@ -1,14 +1,16 @@
 #projects {
-  padding: 60px 0;
+  padding: 60px 20px;
   display: flex;
   flex-direction: column;
+
   p {
-      max-width: 60ch;
-      margin-bottom: 60px;
-    }
+    max-width: 60ch;
+    margin-bottom: 60px;
   }
-#about-project{
-    padding: 60px 0;
+}
+
+#about-project {
+  padding: 60px 0;
 }
 
 .icon {
@@ -32,9 +34,9 @@
 }
 
 .project-item {
-  background-color: aquamarine;
   display: flex;
   gap: 40px;
+  background-color: rgb(199, 199, 72);
 
   .site-img {
     width: 100%;
@@ -42,5 +44,72 @@
 
   .site-description {
     width: 470px;
+  }
+}
+
+@include d(m) {
+  #projects {
+    padding: 40px;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .icon div {
+      width: 70px;
+    }
+  }
+
+  #about-project {
+    padding: 40px 0;
+  }
+
+  .all-projects {
+    padding: 40px 0;
+  }
+  .project-item {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .site-description {
+    width: 100% !important;
+    .btn{
+      width: fit-content;
+    }
+  }
+}
+
+
+@include d(s) {
+  #projects {
+    padding: 20px;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .icon div {
+      width: 60px;
+    }
+  }
+
+  #about-project {
+    padding: 20px 0;
+  }
+
+  .all-projects {
+    padding: 20px 0;
+  }
+    .project-item {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .site-description {
+    width: 100%;
+    .btn{
+      width: 100%;
+      text-align: center;
+    }
   }
 }

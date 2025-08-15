@@ -14,3 +14,24 @@ main {
     font-size: 32px;
   }
 }
+@include d(m){
+  main{
+    h1{
+       font-size: 48px;
+    }
+    h2{
+      font-size: 24px;
+    }
+  }
+}
+
+@include d(s){
+  main{
+    h1{
+       font-size: 36px;
+    }
+    h2{
+      font-size: 18px;
+    }
+  }
+}

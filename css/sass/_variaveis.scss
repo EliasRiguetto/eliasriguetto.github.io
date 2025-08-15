@@ -10,6 +10,11 @@ $secondary-color: #2e2e2e;
 $text-color: #474747;
 $details: #FFCC00;
 
+$l-device: 1200px;
+$m-device: 800px;
+$s-device: 640px;
+
+
 * {
   font-family: 'Nunito', sans-serif;
   color: $secondary-color;
@@ -29,7 +34,7 @@ body {
   font-weight: 600;
   position: relative;
   z-index: 1000;
-  margin-bottom: 16px ;
+  margin-bottom: 16px;
 
   &::before {
     content: '';
@@ -44,11 +49,6 @@ body {
     background-repeat: no-repeat;
     z-index: -10;
   }
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .btn {
@@ -71,7 +71,9 @@ body {
 
   }
 }
-.input, textarea{
+
+.input,
+textarea {
   color: $secondary-color;
   padding: 4px 12px;
   border: 2px solid $secondary-color;
@@ -80,8 +82,68 @@ body {
   font-size: 0.875rem;
   padding: 8px;
   text-indent: 8px;
-    &:focus{
-    border-color: 2px solid $details;
 
+  &:focus {
+    outline: none; // geralmente remove o outline padrão pra usar só a borda
+    border-color: #FFCC00; // muda a cor da borda no foco
+    transition: all .4s;
+  }
+}
+
+
+@mixin d($size) {
+  @if $size =="l" {
+    @media screen and (min-width: $l-device) {
+      @content;
+    }
+  }
+
+  @else if $size =="m" {
+    $max-m: $m-device - 1px; // até 767px
+
+    @media screen and (max-width: $max-m) {
+      @content;
+    }
+  }
+
+  @else if $size =="s" {
+    $max-s: $s-device - 1px; // até 575px
+
+    @media screen and (max-width: $max-s) {
+      @content;
+    }
+  }
+}
+
+
+.container {
+  max-width: $l-device;
+  margin: 0 auto;
+}
+
+@include d(m) {
+  .container {
+    max-width: $m-device;
+    padding: 0 20px;
+  }
+
+  .sub-title {
+    font-size: 96px;
+
+  }
+}
+
+@include d(s) {
+  .container {
+    max-width: $s-device;
+    padding: 0 20px;
+  }
+
+  .sub-title {
+    font-size: 72px;
+  }
+
+  .text {
+    font-size: 1rem;
   }
 }

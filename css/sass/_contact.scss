@@ -1,5 +1,5 @@
 #contact {
-    padding: 60px 0;
+    padding: 60px 20px;
 
     >div {
         display: flex;
@@ -29,24 +29,81 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+
     >div {
         display: flex;
         gap: 12px;
     }
-    p{
-         font-weight: 600;
-         text-indent: 4px;
+
+    p {
+        font-weight: 600;
+        text-indent: 4px;
+        font-size: 1.2rem;
     }
 }
 
-#form{
+#form {
     width: 100%;
-    .form-group{
+
+    .form-group {
         margin-bottom: 16px;
-        label{
+
+        label {
             display: block;
             font-weight: 600;
             margin-bottom: 4px;
         }
+
+        textarea {
+            height: 140px;
+            resize: none;
+        }
+    }
+}
+
+@include d(m) {
+    #contact {
+        padding: 40px;
+
+        >div {
+            flex-direction: column;
+        }
+    }
+
+    #contact-text {
+        gap: 20px;
+
+        p,
+        span {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        #contact-web p {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@include d(s) {
+    #contact {
+        padding: 20px;
+    }
+
+    #contact-text {
+
+        p,
+        span {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+    }
+
+    #contact-web p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 100%;
     }
 }

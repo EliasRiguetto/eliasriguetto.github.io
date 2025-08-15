@@ -2,7 +2,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0;
+    padding: 40px 20px;
     border-top: 2px solid rgb(224, 224, 224);
     font-weight: 600;
 
@@ -15,10 +15,27 @@ footer {
     }
 
     .nav ul a {
-      font-size: 1rem;
-      &:hover{
+        font-size: 1rem;
+
+        &:hover {
             color: $details;
             transition: all .4s;
-      }
+        }
+    }
+}
+
+@include d(m) {
+    footer {
+        padding: 40px !important;
+        gap: 20px;
+    }
+}
+
+@include d(s) {
+    footer {
+        padding: 20px !important;
+        flex-direction: column;
+        gap: 20px;
+        align-items: none;
     }
 }

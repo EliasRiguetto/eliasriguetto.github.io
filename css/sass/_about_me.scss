@@ -1,8 +1,32 @@
 #about {
-  padding: 60px 0;
+  padding: 60px 20px;
   display: flex;
   gap: 40px;
-  p{
-    width: 60ch;
+
+  p {
+    max-width: 60ch;
+  }
+}
+
+@include d(m) {
+  #about {
+    padding: 40px;
+
+    p {
+      width: 30ch;
+    }
+  }
+}
+
+@include d(s) {
+  #about {
+    padding: 20px;
+    p{
+      width: 100%;
+    }
+
+    .about-img {
+      display: none;
+    }
   }
 }
