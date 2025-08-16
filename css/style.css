@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 * {
   box-sizing: border-box;
@@ -47,7 +48,6 @@ body {
   font-weight: 600;
   position: relative;
   z-index: 1000;
-  margin-bottom: 16px;
 }
 .sub-title::before {
   content: "";
@@ -70,7 +70,9 @@ body {
   border: 2px solid #2e2e2e;
   box-shadow: 0px 4px 1px #2e2e2e;
   border-radius: 28px;
+  background: #f9f9f9;
   cursor: pointer;
+  text-align: center;
 }
 .btn:hover {
   background: #FFCC00;
@@ -125,6 +127,34 @@ textarea:focus {
     font-size: 1rem;
   }
 }
+.swiper {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #FFCC00 !important; /* cor que você quiser */
+}
+
+/* cor das bolinhas */
+.swiper-pagination-bullet {
+  background-color: #bbb !important; /* cor padrão */
+  opacity: 1 !important; /* deixa todas visíveis */
+}
+
+/* cor da bolinha ativa */
+.swiper-pagination-bullet-active {
+  background-color: #FFCC00 !important; /* laranja */
+}
+
 header .container {
   padding: 8px;
   display: flex;
@@ -265,20 +295,40 @@ main h2 {
   gap: 20px;
 }
 
-.all-projects {
-  padding: 60px 0;
-}
-
 .project-item {
   display: flex;
-  gap: 40px;
-  background-color: rgb(199, 199, 72);
+  gap: 20px;
 }
 .project-item .site-img {
   width: 100%;
+  height: 327px;
+}
+.project-item .site-img img {
+  border-radius: 16px;
 }
 .project-item .site-description {
   width: 470px;
+}
+.project-item .site-description p {
+  margin-bottom: 16px !important;
+}
+.project-item .site-description h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.project-item .site-description #languages {
+  margin-bottom: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.project-item .site-description #languages span {
+  background: #d9d9d9;
+  padding: 4px 8px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-radius: 12px;
 }
 
 @media screen and (max-width: 799px) {
@@ -343,6 +393,7 @@ main h2 {
 #contact > div {
   display: flex;
   gap: 40px;
+  margin-top: 20px;
 }
 
 #contact-text {

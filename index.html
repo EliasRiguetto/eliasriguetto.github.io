@@ -7,6 +7,7 @@
   <title>Elias Riguetto</title>
   <link rel="icon" href="img/icon/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -65,26 +66,61 @@
         <div><img src="./img/icon/php-icon.svg" alt="Php Icone"></div>
       </div>
     </div>
-    <div class="all-projects">
-      <div class="project-item">
-        <div class="site-img">
-          <img src="img/projects/rx.PNG" alt="">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="project-item">
+            <div class="site-img">
+              <img src="img/projects/rx.PNG" alt="">
+            </div>
+            <div class="site-description">
+              <h3>RX Regulações</h3>
+              <p>RX Regularização é um site criado para capturar clientes e assim ajuda-los a conquistar a sua tão
+                sonhada terra.</p>
+              <div id="languages">
+                <span>HTML</span>
+                <span>SASS</span>
+                <span>JavaScript</span>
+              </div>
+              <a href="" class="btn">Ver Código</a>
+            </div>
+          </div>
         </div>
-        <div class="site-description">
-          <h3>RX regulações</h3>
-          <p>RX Regularização é um site criado para capturar clientes e assim ajuda-los a conquistar a sua tão sonhada
-            terra.</p>
-          <div class="tecnology"></div>
-          <a href="" class="btn">Ver Codigo</a>
+
+        <!-- Slide 2 (outro projeto) -->
+        <div class="swiper-slide">
+          <div class="project-item">
+            <div class="site-img">
+              <img src="img/projects/outro-projeto.png" alt="">
+            </div>
+            <div class="site-description">
+              <h3>Outro Projeto</h3>
+              <p>Descrição do projeto...</p>
+              <div id="languages">
+                <span>React</span>
+                <span>Tailwind</span>
+              </div>
+              <a href="" class="btn">Ver Código</a>
+            </div>
+          </div>
         </div>
+
       </div>
+
+      <!-- Controles -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
+
   </section>
   <section id="contact" class="container">
     <h2 class="sub-title">Contato</h2>
     <div>
       <div id="contact-text">
-        <p>Vamos conversar e tornar suas ideias em <span>realidade</span>?</p>
+        <p>Vamos conversar e transformar suas ideias em <span>realidade</span>?</p>
         <div id="contact-web">
           <p>Me encontre nas redes</p>
           <div>
@@ -130,6 +166,8 @@
       </ul>
     </nav>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
 </body>
 
 </html>
