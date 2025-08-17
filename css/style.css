@@ -129,7 +129,7 @@ textarea:focus {
 }
 .swiper {
   width: 100%;
-  height: 400px;
+  height: fit-content;
   overflow: hidden;
 }
 
@@ -141,18 +141,29 @@ textarea:focus {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #FFCC00 !important; /* cor que você quiser */
+  color: #FFCC00 !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 40px !important;
+  font-weight: 600;
 }
 
-/* cor das bolinhas */
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 32px;
+  bottom: 0 !important;
+}
+
 .swiper-pagination-bullet {
-  background-color: #bbb !important; /* cor padrão */
-  opacity: 1 !important; /* deixa todas visíveis */
+  background-color: #bbb !important;
+  /* cor padrão */
+  opacity: 1 !important;
+  /* deixa todas visíveis */
 }
 
-/* cor da bolinha ativa */
 .swiper-pagination-bullet-active {
-  background-color: #FFCC00 !important; /* laranja */
+  background-color: #FFCC00 !important;
 }
 
 header .container {
@@ -315,6 +326,7 @@ main h2 {
 .project-item .site-description h3 {
   font-size: 3rem;
   font-weight: 500;
+  line-height: 3rem;
   margin-bottom: 16px;
 }
 .project-item .site-description #languages {
@@ -425,6 +437,12 @@ main h2 {
   font-weight: 600;
   text-indent: 4px;
   font-size: 1.2rem;
+}
+#contact-web img {
+  transition: transform 0.2s ease;
+}
+#contact-web img:hover {
+  transform: scale(1.08);
 }
 
 #form {

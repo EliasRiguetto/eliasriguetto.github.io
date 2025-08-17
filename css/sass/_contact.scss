@@ -13,6 +13,7 @@
     flex-direction: column;
     max-width: 500px;
     gap: 68px;
+
     >p,
     span {
         font-size: 3rem;
@@ -39,6 +40,14 @@
         font-weight: 600;
         text-indent: 4px;
         font-size: 1.2rem;
+    }
+
+    img {
+        transition: transform .2s ease;
+
+        &:hover {
+            transform: scale(1.08);
+        }
     }
 }
 
