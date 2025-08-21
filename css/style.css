@@ -123,6 +123,12 @@ textarea:focus {
   .sub-title {
     font-size: 72px;
   }
+  .sub-title::before {
+    left: -48px;
+    top: 42%;
+    width: 100px;
+    height: 100px;
+  }
   .text {
     font-size: 1rem;
   }
